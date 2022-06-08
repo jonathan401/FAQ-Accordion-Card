@@ -1,0 +1,70 @@
+@media screen and (min-width: 900px) {
+  body {
+    padding: 6rem;
+  }
+
+  .faq-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    background-image: url('../assets/images/bg-pattern-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top 65% left -550px;
+    width: 900px;
+    z-index: 2;
+    max-width: none;
+    padding: 0;
+    margin-top: 5rem;
+    margin-bottom: 0;
+
+    &::before {
+      position: absolute;
+      z-index: 5;
+      width: 50px;
+      top: 40%;
+      left: -9%;
+      content: url('../assets/images/illustration-box-desktop.svg');
+    }
+
+    & .banner {
+      overflow: hidden;
+      width: 100%;
+      top: 0;
+      left: 0;
+      transform: translateY(0);
+      padding: 2rem;
+      margin-bottom: 0;
+
+      .banner-image {
+        position: relative;
+        right: 6rem;
+      }
+
+      .banner-image::after {
+        content: '';
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .faq {
+    padding: 5rem 9rem 5rem 3rem;
+    width: 100%;
+
+    header {
+      text-align: left;
+      font-size: 2rem;
+    }
+
+    details {
+      & summary {
+        font-size: 1.3rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}

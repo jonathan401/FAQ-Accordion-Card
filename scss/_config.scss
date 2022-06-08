@@ -1,0 +1,42 @@
+// @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* variables */
+// colors
+
+// Primary - text
+$very-dark-desaturated-blue: hsl(238, 29%, 16%);
+$soft-red: hsl(14, 88%, 65%);
+
+// Gradient
+// Background gradient:
+$soft-violet: rgb(175, 103, 233);
+$soft-blue: rgb(101, 101, 231);
+
+// Neutral - text
+$very-dark-grayish-blue: hsl(237, 12%, 33%);
+$dark-grayish-blue: hsl(240, 6%, 50%);
+
+// Divider
+$light-grayish-blue: hsl(240, 5%, 91%);
+
+// font size
+$base-font-size: 12px;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $base-font-size;
+}
+
+@mixin flex-config($direction, $x-direction, $y-direction) {
+  display: flex;
+  justify-content: $x-direction;
+  align-items: $y-direction;
+}

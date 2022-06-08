@@ -1,0 +1,112 @@
+@import 'config';
+
+body {
+  background-color: rgb(101, 101, 231);
+  background: linear-gradient(0deg, $soft-blue 0%, $soft-violet 70%);
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  overflow-x: hidden;
+  line-height: 1.5;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.lead {
+  font-size: 1.5rem;
+}
+
+.faq-section {
+  border-radius: 20px;
+  margin-top: 12rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1.5rem;
+  background-color: #fff;
+  width: 320px;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.4);
+
+  & .banner {
+    width: 100%;
+    transform: translateY(-50%);
+    padding: 0 2rem;
+    margin-bottom: -80%;
+
+    img {
+      width: 100%;
+    }
+
+    .banner-image::after {
+      display: block;
+      content: url('../assets/images/bg-pattern-mobile.svg');
+      transform: translateY(-70%);
+    }
+  }
+}
+
+.faq {
+  width: 100%;
+  margin-top: 1rem;
+
+  header {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: $very-dark-desaturated-blue;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  details {
+    border-bottom: 1px solid $light-grayish-blue;
+    padding: 1rem 0;
+
+    & summary {
+      display: flex;
+      color: $very-dark-desaturated-blue;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      font-size: 1rem;
+
+      &:hover {
+        cursor: pointer;
+        color: $soft-red;
+      }
+
+      &::after {
+        transition: all 0.5s;
+        display: block;
+        content: url('../assets/images/icon-arrow-down.svg');
+      }
+    }
+
+    p {
+      padding-right: 2rem;
+      font-size: 0.9rem;
+      margin-top: 0.7rem;
+      color: $dark-grayish-blue;
+    }
+  }
+
+  details[open] summary {
+    font-weight: 600;
+
+    &::after {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+.attribution {
+  margin: 2rem auto;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+@import 'desktop';
