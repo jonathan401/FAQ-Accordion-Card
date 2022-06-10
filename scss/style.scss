@@ -74,6 +74,10 @@ body {
       list-style: none;
       font-size: 1rem;
 
+      &::-webkit-details-marker {
+         display: none;
+      }
+
       &:hover {
         cursor: pointer;
         color: $soft-red;
